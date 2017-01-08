@@ -7,10 +7,11 @@ Archecture Information:
 
 The model has three convolution layers and four fully connected layers with elu as activation function and dropout, excluding the last scoring layer. The details are shown below:
 ____________________________________________________________________________________________________ 
-Layer (type)  Output Shape         Param #
-convolution   (None, 32, 16, 32)               kernel=(3, 3)  stride=(1, 1)  activation='elu' 
+Layer         Output Shape         Param #
 
-maxpooling   (None, 32, 8, 16)     896 
+convolution  (None, 32, 16, 32)   896         kernel=(3, 3)  stride=(1, 1)  activation='elu' 
+
+maxpooling   (None, 32, 8, 16)     0
 
 dropout      (None, 32, 8, 16)     0            
 
