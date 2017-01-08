@@ -6,47 +6,39 @@ Behavioral Cloning
 Archecture Information:
 
 The model has three convolution layers and four fully connected layers with elu as activation function and dropout, excluding the last scoring layer. The details are shown below:
-____________________________________________________________________________________________________
-Layer (type)                     Output Shape          Param #     Connected to                     
-____________________________________________________________________________________________________
-convolution2d_1 (Convolution2D)  (None, 32, 16, 32)    896         convolution2d_input_1[0][0]      
-kernel=(3, 3) stride=(1, 1) activation='elu'
-____________________________________________________________________________________________________
-maxpooling2d_1 (MaxPooling2D)    (None, 32, 8, 16)     0           convolution2d_1[0][0]            
-____________________________________________________________________________________________________
-dropout_1 (Dropout)              (None, 32, 8, 16)     0           maxpooling2d_1[0][0]             
-____________________________________________________________________________________________________
-convolution2d_2 (Convolution2D)  (None, 64, 8, 16)     18496       dropout_1[0][0]                  
-kernel=(3, 3) stride=(1, 1) activation='elu'
-____________________________________________________________________________________________________
-maxpooling2d_2 (MaxPooling2D)    (None, 64, 4, 8)      0           convolution2d_2[0][0]            
-____________________________________________________________________________________________________
-dropout_2 (Dropout)              (None, 64, 4, 8)      0           maxpooling2d_2[0][0]             
-____________________________________________________________________________________________________
-convolution2d_3 (Convolution2D)  (None, 128, 4, 8)     24704       dropout_2[0][0]                  
-kernel=(3, 1) stride=(1, 1) activation='elu'
-____________________________________________________________________________________________________
-dropout_3 (Dropout)              (None, 128, 4, 8)     0           convolution2d_3[0][0]            
-____________________________________________________________________________________________________
-flatten_1 (Flatten)              (None, 4096)          0           dropout_3[0][0]                  
-____________________________________________________________________________________________________
-dense_1 (Dense)                  (None, 100)           409700      flatten_1[0][0]                  
-hidden_size=100 activation='elu'
-____________________________________________________________________________________________________
-dropout_4 (Dropout)              (None, 100)           0           dense_1[0][0]                    
-____________________________________________________________________________________________________
-dense_2 (Dense)                  (None, 50)            5050        dropout_4[0][0]     
-hidden_size=50 activation='elu'             
-____________________________________________________________________________________________________
-dropout_5 (Dropout)              (None, 50)            0           dense_2[0][0]                    
-____________________________________________________________________________________________________
-dense_3 (Dense)                  (None, 10)            510         dropout_5[0][0]      
-hidden_size=10 activation='elu'             
-____________________________________________________________________________________________________
-dropout_6 (Dropout)              (None, 10)            0           dense_3[0][0]                    
-____________________________________________________________________________________________________
-dense_4 (Dense)                  (None, 1)             11          dropout_6[0][0]    
-hidden_size=1              
+____________________________________________________________________________________________________ 
+Layer (type)  Output Shape         Param #
+convolution   (None, 32, 16, 32)               kernel=(3, 3)  stride=(1, 1)  activation='elu' 
+
+maxpooling   (None, 32, 8, 16)     896 
+
+dropout      (None, 32, 8, 16)     0            
+
+convolution  (None, 64, 8, 16)     18496       kernel=(3, 3) stride=(1, 1) activation='elu'     
+
+maxpooling   (None, 64, 4, 8)      0          
+
+dropout      (None, 64, 4, 8)      0                   
+
+convolution  (None, 128, 4, 8)     24704       kernel=(3, 1) stride=(1, 1) activation='elu'  
+
+dropout      (None, 128, 4, 8)     0                
+
+flatten      (None, 4096)          0                          
+
+dense        (None, 100)           409700      hidden_size=100 activation='elu'
+
+dropout      (None, 100)           0                               
+
+dense        (None, 50)            5050        hidden_size=50 activation='elu'             
+
+dropout      (None, 50)            0                               
+
+dense        (None, 10)            510         hidden_size=10 activation='elu'             
+
+dropout      (None, 10)            0                               
+
+dense        (None, 1)             11          hidden_size=1              
 ____________________________________________________________________________________________________
 Total params: 459,367
 Trainable params: 459,367
