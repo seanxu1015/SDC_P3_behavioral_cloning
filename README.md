@@ -69,6 +69,6 @@ The dataset now is about two times bigger than the original one when the model s
 
 Here are some data examples:
 
-![image](https://github.com/seanxu1015/SDC_P3_bechvioral_cloning/images/center_2017_01_05_18_08_56_408.jpg)![image](https://github.com/seanxu1015/SDC_P3_bechvioral_cloning/images/center_2017_01_05_18_08_56_526.jpg)
-![image](https://github.com/seanxu1015/SDC_P3_bechvioral_cloning/images/center_2017_01_05_18_08_56_645.jpg)![image](https://github.com/seanxu1015/SDC_P3_bechvioral_cloning/images/center_2017_01_05_18_08_56_764.jpg)
+![image](https://github.com/seanxu1015/SDC_P3_behavioral_cloning/blob/master/images/center_2017_01_05_18_08_56_408.jpg)![image](https://github.com/seanxu1015/SDC_P3_behavioral_cloning/blob/master/images/center_2017_01_05_18_08_56_408.jpg)
+![image](https://github.com/seanxu1015/SDC_P3_behavioral_cloning/blob/master/images/center_2017_01_05_18_08_56_408.jpg)![image](https://github.com/seanxu1015/SDC_P3_behavioral_cloning/blob/master/images/center_2017_01_05_18_08_56_408.jpg)
 
